@@ -8,7 +8,9 @@
         android:layout_width="match_parent"
         android:layout_height="351dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp" />
 
     <TextView
         android:id="@+id/total"
@@ -18,7 +20,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="18dp"
         android:layout_marginBottom="110dp"
-        android:text="TextView" />
+        android:text="Total: 0" />
 
     <Button
         android:id="@+id/checkout_btn"

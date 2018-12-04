@@ -185,15 +185,58 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return product;
     }
 
+    public CartItem[] getCart(String userName) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery(" SELECT * FROM CART_TABLE WHERE userName = ?", new String[] { userName });
+
+        int length = res.getCount();
+        CartItem[] array = new CartItem[length];
+        Log.i("RES", DatabaseUtils.dumpCursorToString(res));
+        if (res.moveToFirst()) {
+            for (int i = 0; i < length; i++) {
+                CartItem item = new CartItem();
+                item.productName = res.getString(res.getColumnIndex("productName"));
+                item.amount = res.getString(res.getColumnIndex("amount"));
+                item.price = getItemPrice(item.productName);
+                array[i] = item;
+                res.moveToNext();
+            }
+        }
+        return array;
+    }
+
+    public int getOrderTotal(String userName) {
+        CartItem[] items = getCart(userName);
+        int length = items.length;
+        int total = 0;
+        if (length == 0) return total;
+        for (int i = 0; i < length; i++) {
+            CartItem item = items[i];
+            int cost = Integer.parseInt(item.price) * Integer.parseInt(item.amount);
+            total += cost;
+        }
+        return total;
+    }
+
+    public String getItemPrice(String productName) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery(" SELECT productPrice FROM PRODUCTS_TABLE WHERE productName = ?", new String[] { productName });
+        String price = "0";
+        if (res.moveToFirst()) {
+            price = res.getString(res.getColumnIndex("productPrice"));
+        }
+        return price;
+    }
+
     public void deleteCart(String userName) {
         SQLiteDatabase db = this.getWritableDatabase();
         String sql = "DELETE FROM CART_TABLE WHERE userName = '" + userName + "'";
         db.execSQL(sql);
     }
 
-    public Client getClient(String username, String password) {
+    public Client getClient(String username) {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("SELECT* FROM " + CLIENTS_TABLE + " WHERE username = ? and password = ?", new String[] { username, password });
+        Cursor res = db.rawQuery("SELECT * FROM " + CLIENTS_TABLE + " WHERE username = ?", new String[] { username });
 
         Client client = new Client();
         if (res.moveToNext()) {

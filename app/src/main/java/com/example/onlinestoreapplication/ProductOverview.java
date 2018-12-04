@@ -17,10 +17,10 @@ public class ProductOverview extends AppCompatActivity {
         String productName = getIntent().getStringExtra("productName");
         product = db.getProduct(productName);
 
-        TextView productNameTxt = findViewById(R.id.productName);
+        TextView productNameTxt = findViewById(R.id.cartProductName);
         TextView productCategoryTxt = findViewById(R.id.productCategory);
         TextView productColorTxt = findViewById(R.id.productColor);
-        TextView productAmountTxt = findViewById(R.id.productAmount);
+        TextView productAmountTxt = findViewById(R.id.cartProductAmount);
         TextView productPriceTxt = findViewById(R.id.productPrice);
 
         productNameTxt.setText(product.productName);

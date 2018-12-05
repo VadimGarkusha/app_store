@@ -1,56 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimary">
 
     <RelativeLayout
-        android:layout_width="368dp"
-        android:layout_height="495dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/colorPrimaryLight"></RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="363dp"
+        android:layout_height="280dp"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_background"
+        android:elevation="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:layout_marginTop="25px"
+            android:textSize="50px"/>
         <EditText
             android:id="@+id/userName"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="13dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="65dp"
             android:ems="10"
+            android:hint="@string/username"
             android:inputType="textPersonName"
-            android:text="username" />
+            android:padding="20px" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="wrap_content"
+            style="@style/EditText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/userName"
             android:layout_alignStart="@+id/userName"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="password" />
+            android:hint="@string/password"
+            android:inputType="textPassword" />
 
         <Button
             android:id="@+id/login"
-            android:layout_width="wrap_content"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/password"
             android:layout_alignStart="@+id/userName"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="108dp"
-            android:text="Login" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/login"
+            android:textColor="@color/colorPrimary"
+            android:textSize="9pt" />
 
         <Button
             android:id="@+id/register"
-            android:layout_width="wrap_content"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/login"
             android:layout_alignStart="@+id/userName"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="-1dp"
-            android:layout_marginBottom="14dp"
-            android:text="Register" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="30px"
+            android:background="@color/colorPrimaryLight"
+            android:elevation="0dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/register"
+            android:textColor="@color/colorPrimary"
+            android:textSize="9pt" />
     </RelativeLayout>
-</android.support.constraint.ConstraintLayout>
+
+
+</RelativeLayout>

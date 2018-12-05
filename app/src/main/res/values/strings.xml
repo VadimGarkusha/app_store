@@ -6,4 +6,8 @@
         <item>category2</item>
         <item>category3</item>
     </string-array>
+    <string name="password">password</string>
+    <string name="username">username</string>
+    <string name="login">Login</string>
+    <string name="register"><u>Register</u></string>
 </resources>

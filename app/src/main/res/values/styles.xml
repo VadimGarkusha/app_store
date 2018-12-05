@@ -4,8 +4,13 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+    <style name="EditText">
+        <item name="colorControlNormal">@color/colorRose</item>
+        <item name="colorControlActivated">@color/colorRose</item>
+        <item name="colorControlHighlight">@color/colorRose</item>
     </style>
 
 </resources>

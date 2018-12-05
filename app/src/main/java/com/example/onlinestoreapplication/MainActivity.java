@@ -28,12 +28,24 @@ public class MainActivity extends AppCompatActivity {
         prefEditor = settings.edit();
 
         final Button loginBtn = findViewById(R.id.login);
+        final Button registerBtn = findViewById(R.id.register);
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 login(v);
             }
         });
+        registerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                register();
+            }
+        });
+    }
+
+    public void register() {
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
     }
 
     public void toSS(String username) {
@@ -42,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         prefEditor.apply();
     }
 
-    public void login(View view){
+    public void login(View view) {
         EditText username = findViewById(R.id.userName);
         EditText password = findViewById(R.id.password);
         String usernameText = username.getText().toString();
@@ -63,5 +75,4 @@ public class MainActivity extends AppCompatActivity {
                     }, 2000);
         }
     }
-
 }

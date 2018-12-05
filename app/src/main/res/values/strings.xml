@@ -6,4 +6,9 @@
         <item>category2</item>
         <item>category3</item>
     </string-array>
+    <string-array name="spinnerDelivery">
+        <item>Our Courier</item>
+        <item>Uber Eats</item>
+        <item>Skip the Dishes</item>
+    </string-array>
 </resources>

@@ -15,11 +15,11 @@ public class ClientMenu extends AppCompatActivity {
         setContentView(R.layout.activity_client_menu);
 
         Button order_button = findViewById(R.id.make_order);
-        Button history_button = findViewById(R.id.order_history);
+        Button view_profile = findViewById(R.id.view_profile);
         Button start_music = findViewById(R.id.start_music);
 
         final Intent orderIntent = new Intent(this, OrderActivity.class);
-        final Intent historyIntent = new Intent(this, HistoryActivity.class);
+        final Intent historyIntent = new Intent(this, ProfileActivity.class);
 
         order_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,7 +27,7 @@ public class ClientMenu extends AppCompatActivity {
                 startActivity(orderIntent);
             }
         });
-        history_button.setOnClickListener(new View.OnClickListener() {
+        view_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(historyIntent);

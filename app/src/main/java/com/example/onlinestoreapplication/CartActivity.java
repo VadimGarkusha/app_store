@@ -14,6 +14,7 @@ public class CartActivity extends AppCompatActivity {
     String userName;
     DataBaseHelper db;
     int totalCost = 0;
+    int amount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class CartActivity extends AppCompatActivity {
         totalCost = db.getOrderTotal(userName);
 
         ListAdapter adapter = new CartAdapter(this, items, userName);
+        amount = items.length;
         ListView view = findViewById(R.id.cart_list);
         view.setAdapter(adapter);
 
@@ -44,7 +46,8 @@ public class CartActivity extends AppCompatActivity {
 
     public void proceedToCheckout() {
         Intent intent = new Intent(this, CheckoutActivity.class);
-        intent.putExtra("totalCost", totalCost);
+        intent.putExtra("totalCost", Integer.toString(totalCost));
+        intent.putExtra("amount", Integer.toString(amount));
         startActivity(intent);
     }
 }

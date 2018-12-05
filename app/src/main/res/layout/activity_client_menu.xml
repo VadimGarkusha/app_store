@@ -21,14 +21,14 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true">
-        <Button
-            android:id="@+id/order_history"
-            style="@style/Base.TextAppearance.AppCompat.Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
-            android:text="Show Order History"
-            android:elevation="5px"/>
+            <Button
+                android:id="@+id/order_history"
+                style="@style/Base.TextAppearance.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="Show Order History"
+                android:elevation="5px"/>
 
             <Button
                 android:id="@+id/make_order"
@@ -43,17 +43,17 @@
                 android:text="Go To Products"
                 android:elevation="5px"/>
 
-        <Button
-            android:id="@+id/start_music"
-            style="@style/Base.TextAppearance.AppCompat.Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/make_order"
-            android:layout_marginTop="141dp"
-            android:layout_marginEnd="2dp"
-            android:background="@drawable/rounded_button"
-            android:text="Start Music"
-            android:elevation="5px"/>
+            <Button
+                android:id="@+id/start_music"
+                style="@style/Base.TextAppearance.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/make_order"
+                android:layout_marginTop="141dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/rounded_button"
+                android:text="Start Music"
+                android:elevation="5px"/>
         </RelativeLayout>
     </RelativeLayout>
 

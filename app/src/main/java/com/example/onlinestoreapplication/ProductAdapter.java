@@ -59,7 +59,7 @@ public class ProductAdapter extends ArrayAdapter<Product> {
                 am = am - Integer.parseInt(fromEditText);
                 db.decreaseProductAmount(Integer.toString(am), product.productName);
 
-                db.addToCart(userName, product.productName, Integer.toString(am));
+                db.addToCart(userName, product.productName, fromEditText);
                 Toast.makeText(getContext(), product.productName + " was added to your cart!", Toast.LENGTH_SHORT).show();
             }
         });

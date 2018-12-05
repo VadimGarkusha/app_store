@@ -10,4 +10,9 @@
     <string name="username">username</string>
     <string name="login">Login</string>
     <string name="register"><u>Register</u></string>
+    <string-array name="spinnerDelivery">
+        <item>Our Courier</item>
+        <item>Uber Eats</item>
+        <item>Skip the Dishes</item>
+    </string-array>
 </resources>

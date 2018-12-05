@@ -28,7 +28,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     };
 
     private static final String[] ORDERS_FIELDS = new String[] {
-            "userName", "orderDate, orderCost, orderProductsAmount"
+            "userName", "orderDate", "orderCost", "deliveryType", "orderProductsAmount"
     };
 
     public DataBaseHelper(Context context) {
@@ -43,12 +43,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS CART_TABLE");
 
         String createClientTable = "CREATE TABLE CLIENTS_TABLE ( " +
-                "clientId INTEGER NOT NULL UNIQUE PRIMARY KEY, " +
+                "clientId INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT, " +
                 "userName TEXT NOT NULL UNIQUE, " +
                 "password TEXT NOT NULL, " +
                 "email TEXT NOT NULL, " +
                 "firstName TEXT NOT NULL, " +
                 "lastName TEXT NOT NULL, " +
+                "phoneNumber TEXT NOT NULL, " +
                 "address TEXT DEFAULT 'No Address', " +
                 "city TEXT DEFAULT 'No City', " +
                 "postalCode TEXT DEFAULT 'No Postal Code', " +
@@ -68,6 +69,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 "orderId INTEGER NOT NULL UNIQUE PRIMARY KEY, " +
                 "orderDate TEXT NOT NULL, " +
                 "orderCost TEXT NOT NULL, " +
+                "deliveryType TEXT NOT NULL, " +
                 "orderProductsAmount TEXT NOT NULL); ";
 
         String createCartTable = "CREATE TABLE CART_TABLE ( " +
@@ -80,8 +82,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(createProductTable);
         db.execSQL(createOrderTable);
         db.execSQL(createCartTable);
-        db.execSQL(" INSERT INTO CLIENTS_TABLE VALUES (1, 'admin', 'password', 'salnichenkoviktor@gmail.com', 'Viktor', 'Salnichenko', '937 Progress Ave', 'Toronto', 'M1G3T8', '4536000200021234', '02/23'); ");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (1, 'Product1', 'category1', '45', 'image1', '15', 'red, blue')");
+        db.execSQL(" INSERT INTO CLIENTS_TABLE VALUES (1001, 'admin', 'password', 'salnichenkoviktor@gmail.com', 'Viktor', 'Salnichenko', '+16478772298', '937 Progress Ave', 'Toronto', 'M1G3T8', '4536000200021234', '02/23'); ");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (1, 'Product1', 'category1', '45', 'http://www.recipesaresimple.com/wp-content/uploads/2017/11/Chicken-Karahi-Dhaba-Style-ingredients-640x426.jpg', '15', 'red, blue')");
         db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (2, 'Product2', 'category1', '35', 'image2', '5', 'red')");
         db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (3, 'Product3', 'category2', '55', 'image3', '6', 'yellow')");
         db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (4, 'Product4', 'category2', '15', 'image4', '7', 'green')");
@@ -98,9 +100,29 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public long register(Client client) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put("userName", client.userName);
+        values.put("password", client.password);
+        values.put("email", client.email);
+        values.put("firstName", client.firstName);
+        values.put("lastName", client.lastName);
+        values.put("phoneNumber", client.phoneNumber);
+        values.put("address", client.address);
+        values.put("city", client.city);
+        values.put("postalCode", client.postalCode);
+        values.put("card", client.card);
+        values.put("expiryDate", client.expiryDate);
+
+        long clientId = -1;
+        clientId = db.insert(CLIENTS_TABLE, null, values);
+        return clientId;
+    }
+
     public int login(String username, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
-        Log.i(username, password);
         Cursor res = db.rawQuery("SELECT clientId FROM " + CLIENTS_TABLE + " WHERE userName = ? AND password = ?", new String[]{ username, password });
         int id = -1;
         Log.i("String", DatabaseUtils.dumpCursorToString(res));
@@ -244,6 +266,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             client.password = res.getString(res.getColumnIndex("password"));
             client.firstName = res.getString(res.getColumnIndex("firstName"));
             client.lastName = res.getString(res.getColumnIndex("lastName"));
+            client.phoneNumber = res.getString(res.getColumnIndex("phoneNumber"));
+            client.email = res.getString(res.getColumnIndex("email"));
             client.address = res.getString(res.getColumnIndex("address"));
             client.city = res.getString(res.getColumnIndex("city"));
             client.postalCode = res.getString(res.getColumnIndex("postalCode"));
@@ -254,13 +278,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return client;
     }
 
-    public void addOrder(String username, String orderDate, String orderCost, String orderProductsAmount) {
+    public void addOrder(String username, String orderDate, String orderCost, String deliveryType, String orderProductsAmount) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues orderValues = new ContentValues();
-        orderValues.put(ORDERS_FIELDS[0], username);
         orderValues.put(ORDERS_FIELDS[1], orderDate);
         orderValues.put(ORDERS_FIELDS[2], orderCost);
-        orderValues.put(ORDERS_FIELDS[3], orderProductsAmount);
+        orderValues.put(ORDERS_FIELDS[3], deliveryType);
+        orderValues.put(ORDERS_FIELDS[4], orderProductsAmount);
         db.insert(ORDERS_TABLE, null, orderValues);
     }
 

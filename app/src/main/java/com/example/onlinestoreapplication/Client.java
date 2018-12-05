@@ -5,6 +5,8 @@ public class Client {
     public String password;
     public String firstName;
     public String lastName;
+    public String email;
+    public String phoneNumber;
     public String address;
     public String city;
     public String postalCode;

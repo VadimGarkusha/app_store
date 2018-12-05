@@ -1,7 +1,9 @@
 package com.example.onlinestoreapplication;
 
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ProductOverview extends AppCompatActivity {
@@ -22,6 +24,9 @@ public class ProductOverview extends AppCompatActivity {
         TextView productColorTxt = findViewById(R.id.productColor);
         TextView productAmountTxt = findViewById(R.id.cartProductAmount);
         TextView productPriceTxt = findViewById(R.id.productPrice);
+        ImageView productImageIv = findViewById(R.id.productImage);
+
+        new ImageUtils(productImageIv).execute(product.productImage);
 
         productNameTxt.setText(product.productName);
         productCategoryTxt.setText(product.productCategory);

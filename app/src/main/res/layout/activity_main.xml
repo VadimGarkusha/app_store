@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,20 +18,21 @@
 
     <RelativeLayout
         android:layout_width="363dp"
-        android:layout_height="280dp"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
+        android:layout_height="290dp"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:background="@drawable/rounded_background"
         android:elevation="20dp">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
             android:text="@string/login"
-            android:textColor="@color/colorPrimary"
             android:textAlignment="center"
-            android:layout_marginTop="25px"
-            android:textSize="50px"/>
+            android:textColor="@color/colorPrimary"
+            android:textSize="65px" />
+
         <EditText
             android:id="@+id/userName"
             android:layout_width="match_parent"
@@ -60,14 +61,14 @@
 
         <Button
             android:id="@+id/login"
-            style="@style/Base.TextAppearance.AppCompat.Button"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/password"
             android:layout_alignStart="@+id/userName"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="2dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/rounded_button"
             android:fontFamily="sans-serif-condensed"
             android:text="@string/login"
@@ -83,7 +84,7 @@
             android:layout_alignStart="@+id/userName"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="1dp"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="30px"
             android:background="@color/colorPrimaryLight"
             android:elevation="0dp"

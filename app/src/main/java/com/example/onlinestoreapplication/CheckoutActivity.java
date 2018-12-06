@@ -82,7 +82,7 @@ public class CheckoutActivity extends AppCompatActivity {
         clientLastName.setText(client.lastName);
         clientCardNumber.setText(client.card);
         cardExpiryDate.setText(client.expiryDate);
-        totalCost.setText("Total: " + totalCostString);
+        totalCost.setText("Total: $" + totalCostString);
 
         messageToSend = "Thank you for order with our application! \n" +
                 "You ordered " + totalAmount + " items on " + totalCostString + " CAD. \n " +
@@ -130,7 +130,7 @@ public class CheckoutActivity extends AppCompatActivity {
                             public void run() {
                                 startActivity(menuIntent);
                             }
-                        }, 3000);
+                        }, 10000);
             }
         });
     }

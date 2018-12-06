@@ -12,8 +12,10 @@
         android:layout_height="37dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
         android:text="TextView" />
 
     <TextView
@@ -22,38 +24,47 @@
         android:layout_height="41dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:textSize="18dp"
+        android:textColor="@color/colorPrimaryDark"
         android:text="TextView" />
 
     <Button
         android:id="@+id/view_btn"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
         android:layout_width="102dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/product_price"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="195dp"
-        android:layout_marginTop="-41dp"
-        android:text="View " />
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="90dp"
+        android:textSize="9pt"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="sans-serif-condensed"
+        android:elevation="0dp"
+        android:text="@string/view" />
 
     <Button
         android:id="@+id/add_to_cart"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
         android:layout_width="103dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/product_price"
-        android:layout_marginStart="-101dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="-121dp"
         android:layout_toEndOf="@+id/view_btn"
-        android:text="Add to Cart" />
+        android:fontFamily="sans-serif-condensed"
+        android:background="@drawable/rounded_button"
+        android:text="@string/addToCart" />
 
     <EditText
         android:id="@+id/amount_to_add"
         android:layout_width="94dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/product_price"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="269dp"
+        android:layout_marginTop="90dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name" />

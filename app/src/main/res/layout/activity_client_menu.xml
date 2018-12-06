@@ -4,35 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ClientMenu"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    tools:context=".ClientMenu">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:background="@color/colorPrimaryLight"
-        android:elevation="70dp">
+        android:elevation="120dp">
 
         <RelativeLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
             <Button
-                android:id="@+id/order_history"
-                style="@style/Base.TextAppearance.AppCompat.Button"
+                android:id="@+id/view_profile"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_button"
-                android:text="Show Order History"
-                android:elevation="5px"/>
+                android:elevation="5px"
+                android:text="@string/viewProfile" />
 
             <Button
                 android:id="@+id/make_order"
-                style="@style/Base.TextAppearance.AppCompat.Button"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -40,20 +41,21 @@
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="73dp"
                 android:background="@drawable/rounded_button"
-                android:text="Go To Products"
-                android:elevation="5px"/>
+                android:elevation="5px"
+                android:text="@string/goToProducts" />
 
             <Button
                 android:id="@+id/start_music"
-                style="@style/Base.TextAppearance.AppCompat.Button"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignEnd="@+id/make_order"
                 android:layout_marginTop="141dp"
                 android:layout_marginEnd="2dp"
                 android:background="@drawable/rounded_button"
-                android:text="Start Music"
-                android:elevation="5px"/>
+                android:elevation="5px"
+                android:text="@string/startMusic"
+                android:layout_marginBottom="5dp"/>
         </RelativeLayout>
     </RelativeLayout>
 

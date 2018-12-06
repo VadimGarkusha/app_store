@@ -83,12 +83,16 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(createOrderTable);
         db.execSQL(createCartTable);
         db.execSQL(" INSERT INTO CLIENTS_TABLE VALUES (1001, 'admin', 'password', 'salnichenkoviktor@gmail.com', 'Viktor', 'Salnichenko', '+16478772298', '937 Progress Ave', 'Toronto', 'M1G3T8', '4536000200021234', '02/23'); ");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (1, 'Product1', 'category1', '45', 'http://www.recipesaresimple.com/wp-content/uploads/2017/11/Chicken-Karahi-Dhaba-Style-ingredients-640x426.jpg', '15', 'red, blue')");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (2, 'Product2', 'category1', '35', 'image2', '5', 'red')");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (3, 'Product3', 'category2', '55', 'image3', '6', 'yellow')");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (4, 'Product4', 'category2', '15', 'image4', '7', 'green')");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (5, 'Product5', 'category3', '25', 'image5', '7', 'white')");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (6, 'Product6', 'category4', '65', 'image6', '2', 'pink')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (1, 'California Roll', 'Sushi', '45', 'http://www.recipesaresimple.com/wp-content/uploads/2017/11/Chicken-Karahi-Dhaba-Style-ingredients-640x426.jpg', '15', 'red, blue')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (2, 'Octopus Roll', 'Sushi', '35', 'image2', '5', 'red')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (1, 'Salmon Roll', 'Sushi', '45', 'http://www.recipesaresimple.com/wp-content/uploads/2017/11/Chicken-Karahi-Dhaba-Style-ingredients-640x426.jpg', '15', 'red, blue')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (2, 'Dynamite Roll', 'Sushi', '35', 'image2', '5', 'red')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (3, 'Maguro', 'Sashimi', '55', 'image3', '6', 'yellow')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (4, 'Ebi', 'Sashimi', '15', 'image4', '7', 'green')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (3, 'Hotate', 'Sashimi', '55', 'image3', '6', 'yellow')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (4, 'Salmon', 'Sashimi', '15', 'image4', '7', 'green')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (5, 'Salmon Bowl', 'Poke', '25', 'image5', '7', 'white')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (6, 'Chicken Bowl', 'Poke', '65', 'image6', '2', 'pink')");
     }
 
     @Override
@@ -304,5 +308,25 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             }
         }
         return array;
+    }
+
+    public boolean updateClientInfo(Client client) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues ClientValues = new ContentValues();
+        ClientValues.put("userName", client.userName);
+        ClientValues.put("password", client.password);
+        ClientValues.put("email", client.email);
+        ClientValues.put("firstName", client.firstName);
+        ClientValues.put("lastName", client.lastName);
+        ClientValues.put("phoneNumber", client.phoneNumber);
+        ClientValues.put("address", client.address);
+        ClientValues.put("city", client.city);
+        ClientValues.put("postalCode", client.postalCode);
+        ClientValues.put("card", client.card);
+        ClientValues.put("expiryDate", client.expiryDate);
+        String username = client.userName;
+
+        int clientId = db.update(CLIENTS_TABLE, ClientValues, "userName = ?", new String[] { username });
+        return clientId != -1;
     }
 }

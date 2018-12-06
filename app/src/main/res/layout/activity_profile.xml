@@ -4,6 +4,161 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    tools:context=".ProfileActivity"
+    android:background="@color/colorPrimary">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/colorPrimaryLight"></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="500dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/rounded_background"
+        android:elevation="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:text="@string/yourProfile"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="65px" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="70dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/username" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_marginLeft="160dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="@string/password" />
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/firstName" />
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password"
+            android:layout_marginLeft="160dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/lastName" />
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lastName"
+            android:layout_marginHorizontal="10dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="@string/phoneNumber" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneNumber"
+            android:layout_marginHorizontal="10dp"
+            android:ems="10"
+            android:inputType="textPostalAddress"
+            android:hint="@string/address" />
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/city" />
+
+        <EditText
+            android:id="@+id/postalCode"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address"
+            android:layout_marginLeft="160dp"
+            android:ems="10"
+            android:inputType="textPostalAddress"
+            android:hint="@string/zip" />
+
+        <EditText
+            android:id="@+id/card"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/postalCode"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/cardNum"
+            android:maxLength="16"/>
+
+        <EditText
+            android:id="@+id/expiryDate"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/postalCode"
+            android:layout_marginLeft="230dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/cardDate"
+            android:maxLength="4"/>
+
+
+        <Button
+            android:id="@+id/update_button"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/expiryDate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_button"
+            android:text="@string/update"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/colorPrimary"
+            android:textSize="9pt"/>
+    </RelativeLayout>
 </RelativeLayout>

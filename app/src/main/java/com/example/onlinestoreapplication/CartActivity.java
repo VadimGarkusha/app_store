@@ -33,7 +33,7 @@ public class CartActivity extends AppCompatActivity {
         view.setAdapter(adapter);
 
         TextView total = findViewById(R.id.total);
-        total.setText("Total: " + Integer.toString(totalCost));
+        total.setText("Total: $" + Integer.toString(totalCost));
 
         Button checkoutBtn = findViewById(R.id.checkout_btn);
         checkoutBtn.setOnClickListener(new View.OnClickListener() {

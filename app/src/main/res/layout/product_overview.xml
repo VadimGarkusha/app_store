@@ -4,16 +4,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".RegisterActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/colorPrimaryLight"></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/rounded_background"
+        android:elevation="20dp">
     <TextView
         android:id="@+id/cartProductName"
         android:layout_width="202dp"
         android:layout_height="43dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
         android:text="TextView" />
 
     <TextView
@@ -22,41 +42,48 @@
         android:layout_height="45dp"
         android:layout_alignStart="@+id/cartProductName"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="73dp"
-        android:text="TextView" />
+        android:layout_marginStart="169dp"
+        android:layout_marginTop="28dp"
+        android:text="TextView"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/cartProductAmount"
         android:layout_width="200dp"
-        android:layout_height="39dp"
-        android:layout_alignStart="@+id/cartProductName"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="131dp"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/productColor"
-        android:layout_width="201dp"
         android:layout_height="45dp"
         android:layout_alignStart="@+id/cartProductName"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="182dp"
-        android:text="TextView" />
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="78dp"
+        android:text="TextView"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/productPrice"
-        android:layout_width="199dp"
-        android:layout_height="40dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
         android:layout_alignStart="@+id/cartProductName"
-        android:layout_centerVertical="true"
-        android:text="TextView" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="169dp"
+        android:layout_marginTop="74dp"
+        android:text="TextView"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp" />
 
     <ImageView
         android:id="@+id/productImage"
-        android:layout_width="172dp"
-        android:layout_height="173dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/cartProductName"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="10dp"
-        app:srcCompat="@color/colorPrimary" />
+        android:layout_marginTop="137dp"
+        android:layout_marginEnd="65dp"
+        android:elevation="70dp"
+        app:srcCompat="@color/colorPrimary"
+        android:layout_marginBottom="20dp"/>
+    </RelativeLayout>
+
+
 </RelativeLayout>

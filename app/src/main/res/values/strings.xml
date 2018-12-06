@@ -6,6 +6,7 @@
         <item>category2</item>
         <item>category3</item>
     </string-array>
+    <!--LOGIN-->
     <string name="password">password</string>
     <string name="username">username</string>
     <string name="login">Login</string>
@@ -15,4 +16,32 @@
         <item>Uber Eats</item>
         <item>Skip the Dishes</item>
     </string-array>
+    <!--MENU-->
+    <string name="viewProfile">View Profile</string>
+    <string name="goToProducts">Go To Products</string>
+    <string name="startMusic">Start Music</string>
+    <!--REGISTRATION-->
+    <string name="registration">Registration</string>
+    <string name="email">email</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="phoneNumber">phone number</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="zip">Postal Code</string>
+    <string name="cardNum">Card Number</string>
+    <string name="cardDate">MMYY</string>
+    <!--ITEMS-->
+    <string name="sort"><u>Sort by price</u></string>
+    <!--ITEM-->
+    <string name="view"><u>View</u></string>
+    <string name="addToCart">Add To Cart</string>
+    <!--CHECKOUT-->
+    <string name="skipTheDishes"><u>Skip The Dishes</u></string>
+    <string name="uber"><u>Uber Eats</u></string>
+    <string name="order">Order</string>
+    <string name="placeOrder">Place Order</string>
+    <!--PROFILE-->
+    <string name="update">Update</string>
+    <string name="yourProfile">Your Profile</string>
 </resources>

@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 import java.io.InputStream;
 import java.net.URL;
-
+//Vadym Harkusha | Viktor Salnichenko
 public class ImageUtils extends AsyncTask<String, Void, Bitmap> {
     ImageView bmImage;
 

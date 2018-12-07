@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+//Vadym Harkusha | Viktor Salnichenko
 public class MainActivity extends AppCompatActivity {
 
     public DataBaseHelper db;

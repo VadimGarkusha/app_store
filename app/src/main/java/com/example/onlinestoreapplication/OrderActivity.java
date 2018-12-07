@@ -13,7 +13,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.Arrays;
-
+//Vadym Harkusha | Viktor Salnichenko
 public class OrderActivity extends AppCompatActivity {
     DataBaseHelper db;
     String userName;

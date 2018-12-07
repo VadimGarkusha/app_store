@@ -6,7 +6,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 public class Browser extends AppCompatActivity {
-
+//Vadym Harkusha | Viktor Salnichenko
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

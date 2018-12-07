@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Browser">
-
+    <!--Vadym Harkusha | Viktor Salnichenko-->
     <WebView
         android:id="@+id/webBrowser"
         android:layout_width="match_parent"

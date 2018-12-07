@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
+//Vadym Harkusha | Viktor Salnichenko
 public class CartActivity extends AppCompatActivity {
     String userName;
     DataBaseHelper db;

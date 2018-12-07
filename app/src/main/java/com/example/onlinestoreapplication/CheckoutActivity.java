@@ -26,7 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
-
+//Vadym Harkusha | Viktor Salnichenko
 public class CheckoutActivity extends AppCompatActivity {
     DataBaseHelper db;
     String userName;

@@ -8,7 +8,7 @@ import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.Toast;
-
+//Vadym Harkusha | Viktor Salnichenko
 public class MusicService extends Service {
     MediaPlayer player;
     static final String AUDIO_PATH = "https://od.lk/s/NDdfMTIzOTQxNjBf/Fantasy_Game_Background.mp3";

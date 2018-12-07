@@ -1,5 +1,5 @@
 package com.example.onlinestoreapplication;
-
+//Vadym Harkusha | Viktor Salnichenko
 public class Product {
     public String productName;
     public String productCategory;

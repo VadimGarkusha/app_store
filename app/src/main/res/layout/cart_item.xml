@@ -7,7 +7,7 @@
     android:layout_below="@id/products"
     android:weightSum="1.0"
     android:paddingHorizontal="10px">
-
+    <!--Vadym Harkusha | Viktor Salnichenko-->
     <TextView
         android:id="@+id/cartProductName"
         android:layout_width="fill_parent"

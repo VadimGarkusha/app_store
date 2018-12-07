@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+//Vadym Harkusha | Viktor Salnichenko
 public class ProfileActivity extends AppCompatActivity {
 
     private boolean isFormValid = true;

@@ -7,7 +7,7 @@ import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-
+//Vadym Harkusha | Viktor Salnichenko
 public class DataBaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "CLIENTS_DATABASE";
     private static final String CLIENTS_TABLE = "CLIENTS_TABLE";
@@ -83,16 +83,16 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(createOrderTable);
         db.execSQL(createCartTable);
         db.execSQL(" INSERT INTO CLIENTS_TABLE VALUES (1001, 'admin', 'password', 'salnichenkoviktor@gmail.com', 'Viktor', 'Salnichenko', '+16478772298', '937 Progress Ave', 'Toronto', 'M1G3T8', '4536000200021234', '02/23'); ");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (1, 'California Roll', 'Sushi', '45', 'http://www.recipesaresimple.com/wp-content/uploads/2017/11/Chicken-Karahi-Dhaba-Style-ingredients-640x426.jpg', '15', 'red, blue')");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (2, 'Octopus Roll', 'Sushi', '35', 'image2', '5', 'red')");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (1, 'Salmon Roll', 'Sushi', '45', 'http://www.recipesaresimple.com/wp-content/uploads/2017/11/Chicken-Karahi-Dhaba-Style-ingredients-640x426.jpg', '15', 'red, blue')");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (2, 'Dynamite Roll', 'Sushi', '35', 'image2', '5', 'red')");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (3, 'Maguro', 'Sashimi', '55', 'image3', '6', 'yellow')");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (4, 'Ebi', 'Sashimi', '15', 'image4', '7', 'green')");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (3, 'Hotate', 'Sashimi', '55', 'image3', '6', 'yellow')");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (4, 'Salmon', 'Sashimi', '15', 'image4', '7', 'green')");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (5, 'Salmon Bowl', 'Poke', '25', 'image5', '7', 'white')");
-        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (6, 'Chicken Bowl', 'Poke', '65', 'image6', '2', 'pink')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (1, 'California Roll', 'Sushi', '45', 'https://www.196flavors.com/wp-content/uploads/2014/10/california-roll-3-FP-300x300.jpg', '15', 'red, blue')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (2, 'Octopus Roll', 'Sushi', '35', 'https://media-cdn.tripadvisor.com/media/photo-s/07/c5/f1/b3/spicy-octopus-roll.jpg', '5', 'red')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (3, 'Salmon Roll', 'Sushi', '45', 'https://daikichisushi.com/dynamic_content/cdn/533_97e576e960bb7c97ccb2a7f8aa01c514.jpg', '15', 'red, blue')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (4, 'Dynamite Roll', 'Sushi', '35', 'https://sushiaji.ca/dynamic_content/cdn/533_95676ebe9b73896f41ed489aeac585af.jpg', '5', 'red')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (5, 'Maguro', 'Sashimi', '55', 'http://www.maguro-restaurant.com/images/home_img2.jpg', '6', 'yellow')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (6, 'Ebi', 'Sashimi', '15', 'http://www.dishocean.com/media/uploads/foods/ebi-tempura-sashimi-shabu-shabu-al-hudaiba-dubai.jpg', '7', 'green')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (7, 'Hotate', 'Sashimi', '55', 'http://www.kumamojosushi.com/wp-content/uploads/2018/01/2-4.jpg', '6', 'yellow')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (8, 'Salmon', 'Sashimi', '15', 'https://www.manusmenu.com/wp-content/uploads/2016/05/1-Salmon-Sashimi-with-Ponzu-3-1-of-1.jpg', '7', 'green')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (9, 'Salmon Bowl', 'Poke', '25', 'https://www.howsweeteats.com/wp-content/uploads/2018/03/mustard-salmon-bowls-I-howsweeteats.com-7.jpg', '7', 'white')");
+        db.execSQL("INSERT INTO PRODUCTS_TABLE VALUES (10, 'Chicken Bowl', 'Poke', '65', 'https://therecipecritic.com/wp-content/uploads/2018/02/blackened_chicken_power_bowl11-1-of-1.jpg', '2', 'pink')");
     }
 
     @Override

@@ -1,10 +1,11 @@
 <resources>
+    <!--Vadym Harkusha | Viktor Salnichenko-->
     <string name="app_name">Online Store Application</string>
     <string-array name="spinnerItems">
         <item>All</item>
-        <item>category1</item>
-        <item>category2</item>
-        <item>category3</item>
+        <item>Sushi</item>
+        <item>Sashimi</item>
+        <item>Poke</item>
     </string-array>
     <!--LOGIN-->
     <string name="password">password</string>

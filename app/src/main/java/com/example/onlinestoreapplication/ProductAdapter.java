@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+//Vadym Harkusha | Viktor Salnichenko
 public class ProductAdapter extends ArrayAdapter<Product> {
     DataBaseHelper db;
     String userName;
@@ -37,7 +37,7 @@ public class ProductAdapter extends ArrayAdapter<Product> {
 
         if (product != null) {
             productName.setText(product.productName);
-            productPrice.setText(product.productPrice);
+            productPrice.setText("$"+product.productPrice);
         }
         amount.setText("1");
 

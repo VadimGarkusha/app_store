@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".OrderActivity"
     android:background="@color/colorPrimary">
-
+    <!--Vadym Harkusha | Viktor Salnichenko-->
     <Spinner
         android:id="@+id/categories_spinner"
         android:layout_width="wrap_content"

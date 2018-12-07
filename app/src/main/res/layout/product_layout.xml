@@ -17,7 +17,7 @@
         android:textColor="@color/colorPrimary"
         android:textSize="20dp"
         android:text="TextView" />
-
+    <!--Vadym Harkusha | Viktor Salnichenko-->
     <TextView
         android:id="@+id/product_price"
         android:layout_width="96dp"

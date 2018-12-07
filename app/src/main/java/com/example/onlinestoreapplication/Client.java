@@ -1,5 +1,5 @@
 package com.example.onlinestoreapplication;
-
+//Vadym Harkusha | Viktor Salnichenko
 public class Client {
     public String userName;
     public String password;

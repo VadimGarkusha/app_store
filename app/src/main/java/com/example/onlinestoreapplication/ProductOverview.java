@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+//Vadym Harkusha | Viktor Salnichenko
 public class ProductOverview extends AppCompatActivity {
     Product product;
     DataBaseHelper db;
